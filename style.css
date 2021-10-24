@@ -32,10 +32,11 @@ body {
 	display: none;
 }
 
-.MapNote {
-
+.rot90 {
+    display: inline-block;
+    vertical-align: text-bottom;
+    transform: rotate(90deg);
 }
-
 /* -------------------------
    --- Flow Chart Layout ---
    ------------------------- */
