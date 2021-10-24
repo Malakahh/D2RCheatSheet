@@ -1,0 +1,221 @@
+/*
+	darkest: 202225;
+	2F3136
+	36393F
+
+	white: FDFDFD;
+*/
+
+body {
+	background-color: #202225;
+	color: #FDFDFD;
+	margin: 25px 25px 25px 25px;
+}
+
+.column {
+	float: left;
+}
+
+.tabControl {
+	margin: 25px 0 25px 0;
+}
+
+#MainContent {
+	margin: 25px 25px 25px 25px;
+}
+
+#MapNotesContainer {
+	padding: 25px;
+}
+
+.hidden {
+	display: none;
+}
+
+.MapNote {
+
+}
+
+/* -------------------------
+   --- Flow Chart Layout ---
+   ------------------------- */
+
+/* src: https://thecodeplayer.com/index.php/walkthrough/css3-family-tree */
+
+* {margin: 0; padding: 0;}
+
+.tree .treeSpacing {
+	margin-top: 20px;
+}
+
+div, .tree, .tree ul, .tree ul li, .tree ul li a {
+	background-color: inherit;
+}
+
+.tree {
+	width: 700px;
+}
+
+.tree .first {
+	padding-top: 0px;
+}
+
+.tree ul::before {
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #FDFDFD;
+	width: 0px; height: 100%;
+}
+
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: none; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 0px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+
+	clear: both;
+}
+
+.tree li .deadendLeft {
+	float: left;
+	width: 31.78%;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	clear: none
+}
+
+.tree li .deadendRight {
+	float: right;
+	width: 31.78%;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	clear: none;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #FDFDFD;
+	width: 0; height: 20px;	
+}
+
+.tree li .deadendLeft::after {
+	right: auto; left: 50%;
+	border-left: 1px solid #FDFDFD;
+	width: 100%;
+}
+
+.tree li .deadendRight::after {
+	border-right: 1px solid #FDFDFD;
+	width: 100%;
+}
+
+
+
+
+.tree li a{
+	border: 1px solid #FDFDFD;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #FDFDFD;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover {
+	background: #FDFDFD; color: #000; border: 1px solid #94a0b4;
+}
+
+/* -----------------------
+   --- Flowchart Notes ---
+   ----------------------- */
+
+.flowchartHasWaypoint {
+	float:left;
+	content: url("Assets/wp.png");
+	filter: brightness(1.5);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.flowchartQuest1 {
+	float:left;
+	content: url("Assets/Q1.png");
+	filter: brightness(0.85);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.flowchartQuest2 {
+	float:left;
+	content: url("Assets/Q2.png");
+	filter: brightness(0.85);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.flowchartQuest3 {
+	float:left;
+	content: url("Assets/Q3.png");
+	filter: brightness(0.85);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.flowchartQuest4 {
+	float:left;
+	content: url("Assets/Q4.png");
+	filter: brightness(0.85);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.flowchartQuest5 {
+	float:left;
+	content: url("Assets/Q5.png");
+	filter: brightness(0.85);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.flowchartQuest6 {
+	float:left;
+	content: url("Assets/Q6.png");
+	filter: brightness(0.85);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+#MapNotes {
+
+}
+

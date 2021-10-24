@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diablo II Resurrected - Cheat Sheet</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function openTab(e, areaID) {
+			var i, tabcontent, tablinks;
+
+			var area = document.getElementById(areaID);
+
+			// Get all elements with class="tabcontent" and hide them
+			tabcontent = area.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// Get all elements with class="tablinks" and remove the class "active"
+			tablinks = area.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+
+			// Show the current tab, and add an "active" class to the button that opened the tab
+			document.getElementById(e.srcElement.innerText).style.display = "block";
+			e.currentTarget.className += " active";
+
+			showMapNote(null)
+		}
+
+		function showMapNote(e) {
+
+			var i;
+			
+			var mapnotes = document.getElementById("MapNotesContainer").getElementsByClassName("MapNote");
+			for (i = 0; i < mapnotes.length; ++i)
+			{
+				mapnotes[i].style.display = "none";
+			}
+
+			if (e != null)
+			{
+				var selected = document.getElementById(e.srcElement.innerText).style.display = "block";
+			}
+
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<h1>Diablo II Resurrected - Cheat Sheet</h1>
+	<div class="tabControl">
+		<button class="tablinks" onclick="openTab(event, 'MainContent')">Maps</button>
+		<button class="tablinks" onclick="openTab(event, 'MainContent')">Test</button>
+	</div>
+
+	
+	<div id="MainContent">
+
+		<!----------
+		--- Maps ---
+		------------>
+		<div id="Maps" class="tabcontent">
+			<h2>Maps</h2>
+			<div class="tabControl">
+				<button class="tablinks" onclick="openTab(event, 'Maps')">Act I</button>
+				<button class="tablinks" onclick="openTab(event, 'Maps')">Act II</button>
+				<button class="tablinks" onclick="openTab(event, 'Maps')">Act III</button>
+				<button class="tablinks" onclick="openTab(event, 'Maps')">Act IV</button>
+				<button class="tablinks" onclick="openTab(event, 'Maps')">Act V</button>
+			</div>
+
+			<div id="Act I" class="tabcontent column">		
+				<h3>Act I</h3>
+				<div class="tree">
+					<ul class="first">
+						<li>
+							<a href="#" onclick="return showMapNote(event)">
+								<div class="flowchartHasWaypoint"></div>
+								Rogue Encampment
+							</a>
+							<ul>
+								<li class="deadendRight"><a href="#">Secret Cow Level</a></li>
+								<li>
+									<a href="#">Blood Moor</a>
+									<ul>
+										<li class="deadendRight">
+											<a href="#">
+												<div class="flowchartQuest1"></div>
+												Den of Evil
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="flowchartHasWaypoint"></div>
+												Cold Plains
+											</a>
+											<ul>
+												<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 125px">In corner</div>
+												<li class="deadendLeft">
+													<a href="#">The Cave - Level 1</a>
+													<ul><li><a href="#">The Cave - Level 2</a></li></ul>
+												</li>
+												<li class="deadendRight">
+													<a href="#">
+														<div class="flowchartQuest2"></div>
+														Burial Grounds
+													</a>
+													<ul>
+														<li class="deadendLeft"><a href="#">The Crypt</a></li>
+														<li class="deadendRight"><a href="#">The Mausoleum</a></li>
+													</ul>
+												</li>
+												<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 25px; top: 65px">Not in<br/>corner</div>
+												<li>
+													<a href="#">
+														<div class="flowchartHasWaypoint"></div>
+														Stony Field
+													</a>
+													<ul>
+														<li class="deadendRight">
+															<a href="#">
+																<div class="flowchartQuest3"></div>
+																Tristram
+															</a>
+														</li>
+														<li>
+															<a href="#">Underground Passage - Level 1</a>
+															<ul>
+																<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 30px; top: 35px">Straight</div>
+																<li class="deadendLeft"><a href="#">Underground Passage - Level 2</a></li>
+																<li>
+																	<a href="#">
+																		<div class="flowchartHasWaypoint"></div>
+																		<div class="flowchartQuest3"></div>
+																		Dark Wood
+																	</a>
+																	<ul>
+																		<li>
+																			<a href="#">
+																				<div class="flowchartHasWaypoint"></div>
+																				Black  Marsh
+																			</a>
+																			<ul>
+																				<li class="deadendRight">
+																					<a href="#">Tower Cellar - Level 1</a>
+																					<ul>
+																						<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 20px; top: -10px">Left</div>
+																						<li>
+																							<a href="#">Tower Cellar - Level 2</a>
+																							<ul>
+																								<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 20px; top: -10px">Left</div>
+																								<li>
+																									<a href="#">Tower Cellar - Level 3</a>
+																									<ul>
+																										<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 20px; top: -10px">Left</div>
+																										<li>
+																											<a href="#">Tower Cellar - Level 4</a>
+																											<ul>
+																												<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 20px; top: -10px">Left</div>
+																												<li>
+																													<a href="#">
+																														<div class="flowchartQuest4"></div>
+																														Tower Cellar - Level 5
+																													</a>
+																												</li>
+																											</ul>
+																										</li>
+																									</ul>
+																								</li>
+																							</ul>
+																						</li>
+																					</ul>
+																				</li>
+																				<li class="deadendLeft">
+																					<a href="#">The Hole - Level 1</a>
+																					<ul><li><a href="#">The Hole - Level 2</a></li></ul>
+																				</li>
+																				<li>
+																					<a href="#">Tamoe Highland</a>
+																					<ul>
+																						<li class="deadendLeft">
+																							<a href="#">The Pit - Level 1</a>
+																							<ul><li><a href="#">The Pit - Level 2</a></li></ul>
+																						</li>
+																						<li>
+																							<a href="#">Monestary Gate</a>
+																							<ul>
+																								<li>
+																									<a href="#">
+																										<div class="flowchartHasWaypoint"></div>
+																										Outer Cloister
+																									</a>
+																									<ul>
+																										<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 55px; top: -10px">Based on WP</div>
+																										<li>
+																											<a href="#">
+																												<div class="flowchartQuest5"></div>
+																												Barracks
+																											</a>
+																											<ul>
+																												<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 65px; top: -10px">Left OR Straight</div> <!-- One takes you to the quest, the other to the exit -->
+																												<li>
+																													<a href="#">
+																														<div class="flowchartHasWaypoint"></div>
+																														Jail - Level 1
+																													</a>
+																													<ul>
+																														<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 35px; top: -10px">Straight</div>
+																														<li>
+																															<a href="#">Jail - Level 2</a>
+																															<ul>
+																																<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 35px; top: -10px">Straight</div>
+																																<li>
+																																	<a href="#">Jail - Level 3</a>
+																																	<ul>
+																																		<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 25px; top: -10px">Left</div>
+																																		<li>
+																																			<a href="#">
+																																				<div class="flowchartHasWaypoint"></div>
+																																				Inner Cloister
+																																			</a>
+																																			<ul>
+																																				<li>
+																																					<a href="#">Cathedral</a>
+																																					<ul>
+																																						<li>
+																																							<a href="#">Catacombs - Level 1</a>
+																																							<ul>
+																																								<li>
+																																									<a href="#">
+																																										<div class="flowchartHasWaypoint"></div>
+																																										Catacombs - Level 2
+																																									</a>
+																																									<ul>
+																																										<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 50px; top: -10px">Right of WP</div>
+																																										<li>
+																																											<a href="#">Catacombs - Level 3</a>
+																																											<ul>
+																																												<li>
+																																													<a href="#" onclick="return showMapNote(event)">
+																																														<div class="flowchartQuest6"></div>
+																																														Catacombs - Level 4
+																																													</a>
+																																												</li>
+																																											</ul>
+																																										</li>
+																																									</ul>
+																																								</li>
+																																							</ul>
+																																						</li>
+																																					</ul>
+																																				</li>
+																																			</ul>
+																																		</li>
+																																	</ul>
+																																</li>
+																															</ul>
+																														</li>
+																													</ul>
+																												</li>
+																											</ul>
+																										</li>
+																									</ul>
+																								</li>
+																							</ul>
+																						</li>
+																					</ul>
+																				</li>
+																			</ul>
+																		</li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li></ul>
+					</div>
+				</div>
+
+				<div id="Act II" class="tabcontent column hidden">
+					<h3>Act II</h3>
+				</div>
+
+				<div id="MapNotesContainer">
+					<h3>Notes</h3>
+					<div id="Rogue Encampment" class="MapNote hidden">
+						<h4>Rogue Encampment</h4>
+						<br><br>
+						This is a sample note
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>
