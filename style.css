@@ -37,6 +37,11 @@ body {
     vertical-align: text-bottom;
     transform: rotate(90deg);
 }
+
+.MapNote {
+	margin: 25px;
+}
+
 /* -------------------------
    --- Flow Chart Layout ---
    ------------------------- */
@@ -94,7 +99,8 @@ div, .tree, .tree ul, .tree ul li, .tree ul li a {
 	width: 31.78%;
 	padding-top: 20px;
 	margin-bottom: 10px;
-	clear: none
+	clear: left;
+	z-index: 10;
 }
 
 .tree li .deadendRight {
@@ -102,7 +108,8 @@ div, .tree, .tree ul, .tree ul li, .tree ul li a {
 	width: 31.78%;
 	padding-top: 20px;
 	margin-bottom: 10px;
-	clear: none;
+	clear: right;
+	z-index: 10;
 }
 
 /*We will use ::before and ::after to draw the connectors*/
@@ -111,7 +118,11 @@ div, .tree, .tree ul, .tree ul li, .tree ul li a {
 	content: '';
 	position: absolute; top: 0; right: 50%;
 	border-top: 1px solid #FDFDFD;
-	width: 0; height: 20px;	
+	width: 0; height: 95%;
+}
+
+.tree li::after {
+	z-index: -1;
 }
 
 .tree li .deadendLeft::after {
@@ -125,7 +136,15 @@ div, .tree, .tree ul, .tree ul li, .tree ul li a {
 	width: 100%;
 }
 
+.tree li .connectsBack {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 
+.tree li .connectsBack::after {
+	content: '';
+	border-bottom: 1px solid #FDFDFD;	
+}
 
 
 .tree li a{
