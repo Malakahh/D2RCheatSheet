@@ -4,7 +4,7 @@
 	<title>Diablo II Resurrected - Cheat Sheet</title>
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript">
-		function openTab(e, areaID) {
+		function openTab(e, areaID, dontNavigate) {
 			var i, tabcontent, tablinks;
 
 			var area = document.getElementById(areaID);
@@ -23,13 +23,26 @@
 
 			// Show the current tab, and add an "active" class to the button that opened the tab
 			document.getElementById(e.srcElement.innerText).style.display = "block";
-			e.currentTarget.className += " active";
+			//e.currentTarget.className += " active";
 
-			showMapNote(null)
+			if (!dontNavigate)
+			{
+				handleActTab(e.srcElement.innerText);
+				showMapNote(null);
+			}
 		}
 
-		function showMapNote(e) {
+		function handleActTab(act)
+		{
+			if (act.startsWith("Act"))
+			{
+				const urlParams = new URLSearchParams();
+				urlParams.set("act", act);
+				window.location.search = urlParams;
+			}
+		}
 
+		function showMapNote(e, act, dontNavigate) {
 			var i;
 			
 			var mapnotes = document.getElementById("MapNotesContainer").getElementsByClassName("MapNote");
@@ -38,12 +51,60 @@
 				mapnotes[i].style.display = "none";
 			}
 
-			if (e != null)
+			if (e != null && e.srcElement != null && e.srcElement.innerText != null)
 			{
-				var selected = document.getElementById(e.srcElement.innerText).style.display = "block";
+				if (act == null)
+				{
+					act = e.srcElement.closest("[id*=Act]").id;
+				}
+
+				var actContainer = document.getElementById("MapNotesContainer" + act);
+				var selected = actContainer.getElementsByClassName(encodeURIComponent(e.srcElement.innerText));
+
+				if (selected.length > 0)
+				{
+					selected[0].style.display = "block";
+					
+					if (!dontNavigate)
+					{
+						const urlParams = new URLSearchParams(window.location.search);
+						urlParams.set("act", act);
+						urlParams.set("zone", e.srcElement.innerText);
+						window.location.search = urlParams;
+					}
+				}
 			}
 
 			return false;
+		}
+
+		window.onload = function()
+		{
+			const url = new URLSearchParams(window.location.search);
+			const act = url.get("act");
+			const zone = url.get("zone");
+
+			console.log(act);
+			console.log(zone);
+
+			if (act)
+			{
+				if (zone)
+				{
+					console.log("hi1")
+					var e = {};
+					e.srcElement = {};
+					e.srcElement.innerText = zone;
+					showMapNote(e, act, true);
+				}
+				else
+				{
+					var e = {};
+					e.srcElement = {};
+					e.srcElement.innerText = act;
+					openTab(e, "Maps", true);
+				}
+			}
 		}
 	</script>
 </head>
@@ -51,7 +112,6 @@
 	<h1>Diablo II Resurrected - Cheat Sheet</h1>
 	<div class="tabControl">
 		<button class="tablinks" onclick="openTab(event, 'MainContent')">Maps</button>
-		<button class="tablinks" onclick="openTab(event, 'MainContent')">Test</button>
 	</div>
 
 	
@@ -528,9 +588,11 @@
 													<li class="deadendLeft">
 														<a href="#" onclick="return showMapNote(event)">Swampy Pit - Level 1</a>
 														<ul>
+															<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 20px; top: -10px">Left</div>
 															<li>
 																<a href="#" onclick="return showMapNote(event)">Swampy Pit - Level 2</a>
 																<ul>
+																	<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 20px; top: -10px">Left</div>
 																	<li>
 																		<a href="#" onclick="return showMapNote(event)">Swampy Pit - Level 3</a>
 																	</li>
@@ -541,9 +603,11 @@
 													<li class="deadendRight">
 														<a href="#" onclick="return showMapNote(event)">Flayer Dungeon - Level 1</a>
 														<ul>
+															<div style="background-color:rgba(0, 0, 0, 0);position:relative;right: 20px; top: -10px">Left</div>
 															<li>
 																<a href="#" onclick="return showMapNote(event)">Flayer Dungeon - Level 2</a>
 																<ul>
+																	<div style="background-color:rgba(0, 0, 0, 0);position:relative;right: 20px; top: -10px">Left</div>
 																	<li>
 																		<a href="#" onclick="return showMapNote(event)">
 																			<div class="flowchartQuest3"></div>
@@ -578,6 +642,7 @@
 																	<li class="deadendRight treeSpacing">
 																		<a href="#" onclick="return showMapNote(event)">Sewers Level 1</a>
 																		<ul>
+																			<div style="background-color:rgba(0, 0, 0, 0);position:relative;right: 45px; top: -10px">Chest Right</div>
 																			<li>
 																				<a href="#" onclick="return showMapNote(event)">
 																					<div class="flowchartQuest3"></div>
@@ -708,16 +773,18 @@
 
 				<div id="MapNotesContainer">
 					<h3>Notes</h3>
-					<div id="Rogue Encampment" class="MapNote hidden">
-						<h4>Act I: Rogue Encampment</h4>
-						<br><br>
-						This is a sample note
-					</div>
+					<div id="MapNotesContainerAct I">
+						<div class="Rogue%20Encampment MapNote hidden">
+							<h4>Act I: Rogue Encampment</h4>
+							<br><br>
+							This is a sample note
+						</div>
 
-					<div id="Barracks" class="MapNote hidden">
-						<h4>Act I: Barracks</h4>
-						<br><br>
-						Navigation: Left OR Straight. One takes you to the quest, the other to the exit
+						<div class="Barracks MapNote hidden">
+							<h4>Act I: Barracks</h4>
+							<br><br>
+							Navigation: Left OR Straight. One takes you to the quest, the other to the exit
+						</div>
 					</div>
 				</div>
 			</div>
