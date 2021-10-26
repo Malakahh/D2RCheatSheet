@@ -59,6 +59,8 @@
 				}
 
 				var actContainer = document.getElementById("MapNotesContainer" + act);
+				console.log(actContainer)
+				console.log(e.srcElement.innerText)
 				var selected = actContainer.getElementsByClassName(encodeURIComponent(e.srcElement.innerText));
 
 				if (selected.length > 0)
@@ -630,6 +632,7 @@
 																	<li class="deadendLeft">
 																		<a href="#" onclick="return showMapNote(event)">Disused Fane</a>
 																	</li>
+																	<div style="background-color:rgba(0, 0, 0, 0);position:relative;left: 25px; top: -10px">Facing South West</div>
 																	<li class="deadendRight">
 																		<a href="#" onclick="return showMapNote(event)">
 																			<div class="flowchartQuest4"></div>
@@ -639,7 +642,7 @@
 																	<li class="deadendRight treeSpacing">
 																		<a href="#" onclick="return showMapNote(event)">Sewers Level 1</a>
 																		<ul>
-																			<div style="background-color:rgba(0, 0, 0, 0);position:relative;right: 45px; top: -10px">Chest Right</div>
+																			<div style="background-color:rgba(0, 0, 0, 0);position:relative;right: 55px; top: -10px">Right of Chest</div>
 																			<li>
 																				<a href="#" onclick="return showMapNote(event)">
 																					<div class="flowchartQuest3"></div>
@@ -923,6 +926,21 @@
 							<h4>Act I: Barracks</h4>
 							<br><br>
 							Navigation: Left OR Straight. One takes you to the quest, the other to the exit
+						</div>
+					</div>
+
+					<div id="MapNotesContainerAct III">
+						<div class="Flayer%20Dungeon%20-%20Level%203 MapNote hidden">
+							<h4>Act III: Flayer Dungeon - Level 3</h4>
+							<br><br>
+							Navigation: 6 set maps exist. Look at the images below, and determine which one you get
+							<br><br>
+							<img src="./Assets/FlayerDungeon3_1.jpeg" style="width: 60%;">
+							<img src="./Assets/FlayerDungeon3_2.jpeg" style="width: 60%;">
+							<img src="./Assets/FlayerDungeon3_3.jpeg" style="width: 60%;">
+							<img src="./Assets/FlayerDungeon3_4.jpeg" style="width: 60%;">
+							<img src="./Assets/FlayerDungeon3_5.jpeg" style="width: 60%;">
+							<img src="./Assets/FlayerDungeon3_6.jpeg" style="width: 60%;">
 						</div>
 					</div>
 				</div>

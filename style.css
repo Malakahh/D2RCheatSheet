@@ -9,11 +9,12 @@
 body {
 	background-color: #202225;
 	color: #FDFDFD;
-	margin: 25px 25px 25px 25px;
+	padding: 25px 25px 25px 25px;
 }
 
 .column {
 	float: left;
+	margin-bottom: 50px;
 }
 
 .tabControl {
@@ -22,6 +23,7 @@ body {
 
 #MainContent {
 	margin: 25px 25px 25px 25px;
+	padding-bottom: 25px;
 }
 
 #MapNotesContainer {
