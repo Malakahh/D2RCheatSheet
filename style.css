@@ -175,6 +175,12 @@ div, .tree, .tree ul, .tree ul li, .tree ul li a {
    --- Flowchart Notes ---
    ----------------------- */
 
+.navigationHint {
+	position:relative;
+	background-color:rgba(0, 0, 0, 0);
+	text-align: left;
+}
+
 .flowchartHasWaypoint {
 	float:left;
 	content: url("Assets/wp.png");
