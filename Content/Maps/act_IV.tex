@@ -1,0 +1,32 @@
+\section{Act IV}
+
+\begin{center}
+	\begin{tikzpicture}[s/.style = {draw, rectangle}]
+		\node[s] (n1) {\inlinegraphics{Assets/wp} Pandemonium Fortress};
+
+		%---- -1
+		\node[s] (n2) at (0, -1) {Outer Steppes};
+
+		\draw[->] (n1) -- (n2);
+
+		%---- -2
+		\node[s] (n3) at (0, -2) {\inlinegraphics{Assets/Q1} Plains of Despair};
+
+		\draw[->] (n2) -- (n3);
+
+		%---- -3
+		\node[s] (n4) at (0, -3) {\inlinegraphics{Assets/wp} City of the Damned};
+
+		\draw[->] (n3) -- (n4);
+
+		%---- -4
+		\node[s] (n5) at (0, -4) {\inlinegraphics{Assets/wp}\inlinegraphics{Assets/Q2} River of Flame};
+
+		\draw[->] (n4) -- (n5);
+
+		%---- -5.5
+		\node[s] (n6) at (0, -5.5) {\inlinegraphics{Assets/Q3} Chaos Sanctuary};
+
+		\draw[->] (n5) -- (n6) node[midway, right] {Straight};
+	\end{tikzpicture}
+\end{center}

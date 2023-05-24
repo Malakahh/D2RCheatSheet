@@ -1,0 +1,121 @@
+\section{Act II}
+\begin{center}
+	\begin{tikzpicture}[s/.style = {draw, rectangle}]
+		\node[s] (n1) {\inlinegraphics{Assets/wp} Lut Gholein};
+
+		%---- -1
+		\node[s] (n2) at (-6, -1) {Sewers - Level 1};
+		\node[s] (n3) at (6, -1) {Harem - Level 1};
+
+		\draw[->] (n1.south) |- ($(n1.south) - (0, 2.5mm)$) -| (n2.north);
+		\draw[->] (n1.south) |- ($(n1.south) - (0, 2.5mm)$) -| (n3.north);
+
+		%---- -2.5
+		\node[s] (n4) at (-6, -2.5) {\inlinegraphics{Assets/wp} Sewers - Level 2};
+		\node[s] (n5) at (6, -2.5) {Harem - Level 2};
+
+		\draw[->] (n2) -- (n4) node[midway, right] {Close to Stairs Entrance};
+		\draw[->] (n3) -- (n5);
+
+		%---- -4.5
+		\node[s] (n6) at (-6, -4.5) {\inlinegraphics{Assets/Q1} Sewers - Level 3};
+		\node (e1) at (-3.9, -4.5) {Left};
+		\node[s] (n7) at (6, -4.5) {\inlinegraphics{Assets/wp} Palace Cellar - Level 1};
+		\node[s] (n8) at (0, -4.5) {Rocky Waste};
+
+		\draw[->] (n4) -- (n6) node[midway, right, text width=3cm] {Straight\\Left from WP};
+		\draw[->] (n5) -- (n7);
+		\draw[->] (n1) -- (n8) node[midway, right, text width=3cm] {**For Outdoor\\zones, always\\in corners**};
+
+		%---- -5.5
+		\node[s] (n9) at (6, -5.5) {Palace Cellar - Level 2};
+
+
+		\draw[->] (n7) -- (n9);
+
+
+		%---- -6
+		\node[s,gray] (n10) at (-6, -6) {Stony Tomb - Level 1};
+
+		\draw[->,gray] (n8.south) |- ($(n10.north) + (0, 2.5mm)$) -| (n10.north);
+
+		%---- -6.5
+		\node[s] (n11) at (6, -6.5) {Palace Cellar - Level 3};
+
+		\draw[->] (n9) -- (n11);
+
+		%---- -7.5
+		\node[s,gray] (n12) at (-6, -7.5) {Stony Tomb - Level 2};
+		\node[text width=3cm,gray] (e2) at (-2.6, -7.5) {Chest Left,\\Boss Straight};
+		\node[s] (n13) at (6, -7.5) {\inlinegraphics{Assets/wp}\inlinegraphics{Assets/Q4}\inlinegraphics{Assets/Q5} Arcane Sanctuary};
+		\node[s] (n14) at (0, -7.5) {\inlinegraphics{Assets/wp} Dry Hills};
+
+		\draw[->] (n11) -- (n13);
+		\draw[->,gray] (n10) -- (n12) node[midway, right] {Left};
+		\draw[->] (n8) -- (n14);
+
+		%---- -9
+		\node[s] (n15) at (-6, -9) {Halls of the Dead - Level 1};
+		\node[s] (n16) at (6, -9) {\inlinegraphics{Assets/wp} Canyon of the Magi};
+
+		\draw[->] (n14.south) |- ($(n15.north) + (0, 2.5mm)$) -| (n15.north);
+		\draw[->] (n13) -- (n16);
+
+		%---- -10.5
+		\node[s] (n17) at (-6, -10.5) {\inlinegraphics{Assets/wp} Halls of the Dead - Level 2};
+		\node[s] (n18) at (6, -10.5) {Tal Rasha's Tomb};
+		\node (e3) at (-2.4, -10.5) {WP Straight};
+
+		\draw[->] (n15) -- (n17) node[midway, right] {Left};
+		\draw[->] (n16) -- (n18) node[midway, left] {o \rotatebox[origin=c]{-90}{)} $\square$\hspace{5mm}*\hspace{5mm}\rotatebox[origin=c]{-90}{$\gg$} $\bigtriangleup$ \rotatebox[origin=c]{-90}{o)}};
+
+		%---- -12
+		\node[s] (n19) at (-6, -12) {\inlinegraphics{Assets/Q2} Halls of the Dead - Level 3};
+		\node[s] (n20) at (6, -12) {\inlinegraphics{Assets/Q6} Tal Rasha's Chamber};
+		\node (e3) at (-3.1, -12) {Left};
+		\node[s] (n21) at (0, -12) {\inlinegraphics{Assets/wp} Far Oasis};
+
+		\draw[->] (n17) -- (n19) node[midway, right] {Left};
+		\draw[->] (n18) -- (n20) node[midway, left] {Left};
+		\draw[->] (n14) -- (n21);
+
+		%---- -13.5
+		\node[s] (n22) at (-6, -13.5) {Maggot Lair - Level 1};
+
+		\draw[->] (n21.south) |- ($(n21.south) - (0, 7mm)$) -| (n22.north);
+
+		%---- -15
+		\node[s] (n23) at (-6, -15) {Maggot Lair - Level 2};
+
+		\draw[->] (n22) -- (n23) node[midway, right] {Right};
+
+		%---- -16.5
+		\node[s] (n24) at (-6, -16.5) {\inlinegraphics{Assets/Q2} Maggot Lair - Level 3};
+		\node (e4) at (-3.2, -16.5) {Straight};
+		\node[s] (n25) at (0, -16.5) {\inlinegraphics{Assets/wp} Lost City};
+
+		\draw[->] (n23) -- (n24) node[midway, right] {Right};
+		\draw[->] (n21) -- (n25);
+
+		%---- -18
+		\node[s,gray] (n26) at (-6, -18) {Ancient Tunnels};
+		\node[gray] (e5) at (-3.7, -18) {Chest Left};
+
+		\draw[->,gray] (n25.south) |- ($(n25.south) - (0, 7mm)$) -| (n26.north);
+
+		%---- -19.5
+		\node[s] (n27) at (0, -19.5) {Valley of Snakes};
+
+		\draw[->] (n25) -- (n27) node[pos=0.65,right,text width=5cm] {**Exception to corners rule**\\Cannot be South};
+
+		%---- -20.5
+		\node[s] (n28) at (0, -20.5) {Claw Viper Temple - Level 1};
+
+		\draw[->] (n27) -- (n28);
+
+		%---- -22
+		\node[s] (n29) at (0, -22) {\inlinegraphics{Assets/Q2}\inlinegraphics{Assets/Q3} Claw Viper Temple - Level 2};
+
+		\draw[->] (n28) -- (n29) node[midway, right] {Left};
+	\end{tikzpicture}
+\end{center}

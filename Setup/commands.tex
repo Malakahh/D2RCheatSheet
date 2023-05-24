@@ -1,0 +1,12 @@
+\newcommand{\TODO}[2][ ]{
+	\ifthenelse{\equal{#1}{inline}}
+		{\todo[inline, size=\small, color=green!40]{TODO: #2}}
+		{\todo[size=\small,color=green!40]{TODO: #2}}
+}
+
+\newcommand{\inlinegraphics}[1]{
+	\includegraphics[height=10pt]{#1}
+}
+
+\newcommand{\internallinkicon}{\scalebox{0.75}{\ArrowBoldUpRight}}
+\newcommand{\internallink}[2]{\hyperref[#1]{#2 \internallinkicon}}

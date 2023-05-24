@@ -1,0 +1,94 @@
+\section{Act V}
+
+\begin{center}
+	\begin{tikzpicture}[s/.style = {draw, rectangle}]
+		\node[s] (n1) {\inlinegraphics{Assets/wp} Harrogath};
+
+		%---- -1
+		\node[s] (n2) at (0, -1) {\inlinegraphics{Assets/Q1} Bloody Foothills};
+		\node[s] (n3) at (6, -1) {Nihlathak's Temple};
+
+		\draw[->] (n1) -- (n2);
+		\draw[->] (n1.south) |- ($(n1.south) - (0, 2.5mm)$) -| (n3.north);
+
+		%---- -2
+		\node[s] (n4) at (0, -2) {\inlinegraphics{Assets/wp}\inlinegraphics{Assets/Q2} Frigid Highlands};
+		\node[s] (n5) at (6, -2) {Halls of Anguish};
+
+		\draw[->] (n2) -- (n4);
+		\draw[->] (n3) -- (n5);
+
+		%---- -3
+		\node[s,gray] (n6) at (-6, -3) {Abaddon};
+		\node[s] (n7) at (6, -3) {\inlinegraphics{Assets/wp} Halls of Pain};
+		\node[s] (n8) at (0, -3) {\inlinegraphics{Assets/wp} Arreat Plateau};
+
+		\draw[->,gray] (n4.south) |- ($(n4.south) - (0, 2.5mm)$) -| (n6.north);
+		\draw[->] (n5) -- (n7);
+		\draw[->] (n4) -- (n8);
+
+		%---- -4
+		\node[s,gray] (n9) at (-6, -4) {Pit of Acheron};
+		\node[s] (n10) at (0, -4) {\inlinegraphics{Assets/wp} Crystalline Passage};
+		\node (e1) at (2.8, -4) {WP Right};
+		\node[s] (n11) at (6, -4) {\inlinegraphics{Assets/Q4} Halls of Vaught};
+		
+		\draw[->,gray] (n8.south) |- ($(n8.south) - (0, 2.5mm)$) -| (n9.north);
+		\draw[->] (n8) -- (n10);
+		\draw[->] (n7) -- (n11);
+
+		%---- -6
+		\node[s] (n12) at (-6, -6) {\inlinegraphics{Assets/Q3} Frozen River};
+		\node[s] (n13) at (0, -6) {\inlinegraphics{Assets/wp} Glacial Trail};
+		\node (e2) at (2.3, -6) {WP Right};
+
+		\draw[->] (n10.south) |- ($(n10.south) - (0, 7.5mm)$) -| (n12.north) node[pos=0.25, above] {Straight};
+		\draw[->] (n10) -- (n13) node[pos=0.75, right] {Left};
+
+		%---- -8
+		\node[s,gray] (n14) at (-6, -8) {Drifter Cavern};
+		\node[s] (n15) at (0, -8) {\inlinegraphics{Assets/wp} Frozen Tundra};
+
+		\draw[->,gray] (n13.south) |- ($(n13.south) - (0, 7.5mm)$) -| (n14.north);
+		\draw[->] (n13) -- (n15) node[pos=0.75, right] {Left};
+
+		%---- -9
+		\node[s,gray] (n16) at (-6, -9) {Infernal Pit};
+		\node[s] (n17) at (0, -9) {\inlinegraphics{Assets/wp} The Ancients' Way};
+
+		\draw[->,gray] (n15.south) |- ($(n15.south) - (0, 2.5mm)$) -| (n16.north);
+		\draw[->] (n15) -- (n17);
+
+		%---- -10.5
+		\node[s,gray] (n18) at (-6, -10.5) {Icy Cellar};
+		\node[s] (n19) at (0, -10.5) {\inlinegraphics{Assets/Q5} Arreat Summet};
+
+		\draw[->,gray] (n17.south) |- ($(n17.south) - (0, 2.5mm)$) -| (n18.north);
+		\draw[->] (n17) -- (n19) node[pos=0.65, right] {Left};
+
+		%---- -11.5
+		\node[s] (n20) at (0, -11.5) {The Worldstone Keep - Level 1};
+
+		\draw[->] (n19) -- (n20);
+
+		%---- -12.5
+		\node[s] (n21) at (0, -12.5) {\inlinegraphics{Assets/wp} The Worldstone Keep - Level 2};
+
+		\draw[->] (n20) -- (n21);
+
+		%---- -14
+		\node[s] (n22) at (0, -14) {The Worldstone Keep - Level 3};
+
+		\draw[->] (n21) -- (n22) node[midway, right] {Right from WP};
+
+		%---- -15
+		\node[s] (n23) at (0, -15) {Throne of Destruction};
+
+		\draw[->] (n22) -- (n23);
+
+		%---- -16
+		\node[s] (n24) at (0, -16) {\inlinegraphics{Assets/Q6} Worldstone Chamber};
+
+		\draw[->] (n23) -- (n24);
+	\end{tikzpicture}
+\end{center}

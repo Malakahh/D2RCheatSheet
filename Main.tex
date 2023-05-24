@@ -1,0 +1,30 @@
+\input{Setup/preamble}
+\input{Setup/variables}
+\input{Setup/commands}
+
+\geometry{a4paper, portrait, includeheadfoot, margin=1cm}
+\color{white}
+
+
+\fancypagestyle{plain}{%
+	\fancyfoot[C]{}%
+	\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}%	
+}
+\fancypagestyle{fancy}{%
+	\fancyfoot[C]{}%
+	\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}%	
+}
+\pagestyle{fancy}
+\pagecolor{DocumentBackground}
+
+\begin{document}
+\listoftodos
+\pdfbookmark[0]{Contents}{label:contents}
+\tableofcontents
+\clearpage
+%
+\input{Content/content}
+\clearpage
+\bibliographystyle{plain}
+{\small{\bibliography{references}}}
+\end{document}
