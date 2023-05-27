@@ -10,3 +10,34 @@
 
 \newcommand{\internallinkicon}{\scalebox{0.75}{\ArrowBoldUpRight}}
 \newcommand{\internallink}[2]{\hyperref[#1]{#2 \internallinkicon}}
+
+% #1: min, #2: max, #3 toEval
+% \newcommand{\clamp}[3]{
+% 	\FPiflt#3#1 #1 		% return min
+% 	\else\FPifgt#3#2 #2	% return max
+% 	\else#3\fi
+% 	\fi
+% }
+
+
+% #1: min, #2: max, #3 toEval
+\newcommand{\CCellRedGreen}[3]{
+	% \FPeval{\mid}{((#2 - #1) / 2 + #1)}% ((max - min)) / 2) + min
+	% %red
+	% \FPeval{\rMax}{#2 - \mid} % max - mid
+	% \FPeval{\rEval}{#3 - \mid} % toEval - mid
+	% \FPeval{\rVal}{1 - \clamp{0}{1}{\rEval / \rMax}}
+	% %green
+	% \FPeval{\gMax}{\mid - #1} % min - min
+	% \FPeval{\gEval}{\mid - #3} % min - toEval
+	% \FPeval{\gVal}{\clamp{0}{1}{\gEval / \gMax}}
+	% \definecolor{collol}{rgb}{\rVal, \gVal, 0.0}
+	% \cellcolor{collol}
+
+
+	\cellcolor{tableGreen!\fpeval{((#3 - #1) / (#2 - #1)) * 100}!tableRed}
+}
+\newcommand{\CCellRedGreenP}[3]{\CCellRedGreen{#1}{#2}{#3}\color{black}#3}
+
+\newcommand{\SCCellCol}[1]{\cellcolor{tableGreen!\fpeval{((#1 - \SCMin) / (\SCMax - \SCMin)) * 100}!tableRed}}
+\newcommand{\SCCellColP}[1]{\SCCellCol{#1}\color{black}#1}

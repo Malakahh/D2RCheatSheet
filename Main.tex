@@ -18,13 +18,18 @@
 \pagecolor{DocumentBackground}
 
 \begin{document}
-\listoftodos
 \pdfbookmark[0]{Contents}{label:contents}
 \tableofcontents
 \clearpage
-%
+
 \input{Content/content}
 \clearpage
+
 \bibliographystyle{plain}
 {\small{\bibliography{references}}}
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Todo List}
+\listoftodos
 \end{document}

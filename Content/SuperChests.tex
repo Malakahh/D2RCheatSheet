@@ -1,0 +1,275 @@
+\chapter{Super Chests}
+
+Based on emulations from d2emu\cite{d2emu}. Colours range from red to green, based on lowest and highest value respectively.
+
+\newcommand{\SCMin}{0}
+\newcommand{\SCMax}{26}
+
+% Example
+% \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+% 	\hline
+% 	         & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+% 	         & Unlocked                & Locked                  & Unlocked                & Locked                     & Unlocked         & Locked           & Unlocked         & Locked \\
+% 	\hline
+% 	    Zod  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Cham & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Jah  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Ber  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Sur  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Lo   & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Ohm  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Vex  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Gul  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Ist  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Mal  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Um   & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+%     \hline
+% 	    Pul  & \SCCellColP{501}        & \SCCellColP{502}        & \SCCellColP{503}        & \SCCellColP{504}           & \SCCellColP{505} & \SCCellColP{506} & \SCCellColP{507} & \SCCellColP{508} \\
+% 	\hline
+% \end{tabular}
+
+\section{Act I - Hell}
+
+Black Marsh, Catacombs Level 1, Catacombs Level 2, Catacombs Level 3, Catacombs Level 4, Crypt, Mausoleum, Tower Cellar Level 1, Tower Cellar Level 2, Tower Cellar Level 3, Tower Cellar Level 4\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+			 & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+			 & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked \\
+	\hline
+			Zod & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Cham & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Jah & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Ber & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Sur & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Lo & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Ohm & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Vex & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Gul & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{5} & \SCCellColP{5}\\
+	\hline
+			Ist & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{2} & \SCCellColP{3} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{11} & \SCCellColP{11}\\
+	\hline
+			Mal & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Um & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{11} & \SCCellColP{11}\\
+	\hline
+			Pul & \SCCellColP{9} & \SCCellColP{10} & \SCCellColP{13} & \SCCellColP{14} & \SCCellColP{12} & \SCCellColP{13} & \SCCellColP{25} & \SCCellColP{26}\\
+	\hline
+\end{tabular}\\\\
+
+
+\noindent Blood Moor, Stony Field\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+			 & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+			 & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked \\
+	\hline
+			Zod & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Cham & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Jah & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Ber & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Sur & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Lo & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Ohm & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Vex & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Gul & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{8} & \SCCellColP{9} & \SCCellColP{6} & \SCCellColP{6}\\
+	\hline
+			Ist & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{7} & \SCCellColP{8} & \SCCellColP{7} & \SCCellColP{9}\\
+	\hline
+			Mal & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{5} & \SCCellColP{6} & \SCCellColP{5} & \SCCellColP{5}\\
+	\hline
+			Um & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{6} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{8}\\
+	\hline
+			Pul & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{13} & \SCCellColP{15} & \SCCellColP{16} & \SCCellColP{17} & \SCCellColP{21} & \SCCellColP{21}\\
+	\hline
+\end{tabular}
+
+
+
+
+\section{Act II - Hell}
+
+Arcane Sanctuary, Lost City, Maggot Lair Level 1, Maggot Lair Level 2, Maggot Lair Level 3\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+			 & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+			 & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked \\
+	\hline
+			Zod & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Cham & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Jah & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Ber & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Sur & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Lo & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{2} & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{5}\\
+	\hline
+			Ohm & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{10} & \SCCellColP{10} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Vex & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Gul & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{7} & \SCCellColP{8} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{4} & \SCCellColP{5}\\
+	\hline
+			Ist & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{8} & \SCCellColP{9} & \SCCellColP{8} & \SCCellColP{8}\\
+	\hline
+			Mal & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{7} & \SCCellColP{9} & \SCCellColP{8} & \SCCellColP{8}\\
+	\hline
+			Um & \SCCellColP{5} & \SCCellColP{6} & \SCCellColP{9} & \SCCellColP{11} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{14} & \SCCellColP{14}\\
+	\hline
+			Pul & \SCCellColP{9} & \SCCellColP{10} & \SCCellColP{14} & \SCCellColP{14} & \SCCellColP{18} & \SCCellColP{18} & \SCCellColP{18} & \SCCellColP{20}\\
+	\hline
+\end{tabular}
+
+
+
+
+\section{Act III - Hell}
+
+Durance of Hate Level 3, Kurast Bazaar, Kurast Sewers Level 1, Kurast Sewers Level 2, Lower Kurast, Upper Kurast\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+			 & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+			 & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked \\
+	\hline
+			Zod & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Cham & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Jah & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Ber & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{2} & \SCCellColP{2}\\
+	\hline
+			Sur & \SCCellColP{2} & \SCCellColP{3} & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{7} & \SCCellColP{9} & \SCCellColP{9}\\
+	\hline
+			Lo & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{2} & \SCCellColP{2}\\
+	\hline
+			Ohm & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{5} & \SCCellColP{5}\\
+	\hline
+			Vex & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{6}\\
+	\hline
+			Gul & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{4} & \SCCellColP{6} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{11} & \SCCellColP{11}\\
+	\hline
+			Ist & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{8} & \SCCellColP{10} & \SCCellColP{5} & \SCCellColP{6} & \SCCellColP{5} & \SCCellColP{7}\\
+	\hline
+			Mal & \SCCellColP{9} & \SCCellColP{9} & \SCCellColP{12} & \SCCellColP{12} & \SCCellColP{10} & \SCCellColP{10} & \SCCellColP{14} & \SCCellColP{15}\\
+	\hline
+			Um & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{7} & \SCCellColP{9} & \SCCellColP{11} & \SCCellColP{11} & \SCCellColP{10} & \SCCellColP{11}\\
+	\hline
+			Pul & \SCCellColP{9} & \SCCellColP{9} & \SCCellColP{12} & \SCCellColP{14} & \SCCellColP{16} & \SCCellColP{18} & \SCCellColP{16} & \SCCellColP{16}\\
+	\hline
+\end{tabular}
+
+
+
+
+\section{Act IV - Hell}
+
+River of Flame\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+			 & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+			 & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked \\
+	\hline
+			Zod & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0}\\
+	\hline
+			Cham & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{1} & \SCCellColP{1}\\
+	\hline
+			Jah & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{2}\\
+	\hline
+			Ber & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{3} & \SCCellColP{4} & \SCCellColP{3} & \SCCellColP{4}\\
+	\hline
+			Sur & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{5}\\
+	\hline
+			Lo & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Ohm & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{9} & \SCCellColP{9}\\
+	\hline
+			Vex & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{4} & \SCCellColP{5}\\
+	\hline
+			Gul & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{9} & \SCCellColP{9} & \SCCellColP{10} & \SCCellColP{10}\\
+	\hline
+			Ist & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{11} & \SCCellColP{11}\\
+	\hline
+			Mal & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{10} & \SCCellColP{10} & \SCCellColP{8} & \SCCellColP{9} & \SCCellColP{10} & \SCCellColP{11}\\
+	\hline
+			Um & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{12} & \SCCellColP{14} & \SCCellColP{5} & \SCCellColP{6}\\
+	\hline
+			Pul & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{7} & \SCCellColP{14} & \SCCellColP{15} & \SCCellColP{11} & \SCCellColP{13}\\
+	\hline
+\end{tabular}
+
+
+
+
+\section{Act V - Hell}
+
+Frigid Highlands, Glacial Trail, Halls of Anguish, Halls of Pain\\
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+	\hline
+			 & \multicolumn{2}{c|}{P1} & \multicolumn{2}{c|}{P3} & \multicolumn{2}{c|}{P5} & \multicolumn{2}{c|}{P7} \\
+			 & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked & Unlocked & Locked \\
+	\hline
+			Zod & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{1} & \SCCellColP{1}\\
+	\hline
+			Cham & \SCCellColP{2} & \SCCellColP{3} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{0} & \SCCellColP{1} & \SCCellColP{1}\\
+	\hline
+			Jah & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{1} & \SCCellColP{1}\\
+	\hline
+			Ber & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{1} & \SCCellColP{1} & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{5} & \SCCellColP{6}\\
+	\hline
+			Sur & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{0} & \SCCellColP{1} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{4} & \SCCellColP{4}\\
+	\hline
+			Lo & \SCCellColP{1} & \SCCellColP{2} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{3} & \SCCellColP{3}\\
+	\hline
+			Ohm & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{4} & \SCCellColP{6}\\
+	\hline
+			Vex & \SCCellColP{3} & \SCCellColP{3} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{8} & \SCCellColP{8}\\
+	\hline
+			Gul & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{2} & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{6} & \SCCellColP{6}\\
+	\hline
+			Ist & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{8} & \SCCellColP{8}\\
+	\hline
+			Mal & \SCCellColP{4} & \SCCellColP{4} & \SCCellColP{5} & \SCCellColP{6} & \SCCellColP{6} & \SCCellColP{7} & \SCCellColP{14} & \SCCellColP{16}\\
+	\hline
+			Um & \SCCellColP{5} & \SCCellColP{5} & \SCCellColP{11} & \SCCellColP{11} & \SCCellColP{9} & \SCCellColP{10} & \SCCellColP{10} & \SCCellColP{10}\\
+	\hline
+			Pul & \SCCellColP{14} & \SCCellColP{14} & \SCCellColP{14} & \SCCellColP{15} & \SCCellColP{14} & \SCCellColP{14} & \SCCellColP{17} & \SCCellColP{18}\\
+	\hline
+\end{tabular}
+
+
