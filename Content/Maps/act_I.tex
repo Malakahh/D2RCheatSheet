@@ -1,5 +1,5 @@
 \section{Act I}
-
+\TODO{Optimize layout here. Some spacing can be minimized}
 \begin{center}
 	\scalebox{0.9}{
 		\begin{tikzpicture}[s/.style = {draw, rectangle}]
@@ -58,84 +58,86 @@
 
 			%---- -10
 			\node[s,gray] (n17) at (-5, -10) {The Hole - Level 1};
-			\node[s] (n18) at (5, -10) {Tower Cellar - Level 1};
+			\node[s] (n18) at (5, -10) {Forgotten Tower};
 			\node[s] (n21) at (0, -10) {Tamoe Highland};
 
 			\draw[->,gray] (n16.south) |- ($(n16.south) - (0, 2.5mm)$) -| (n17.north);
-			\draw[->] (n16.south) |- ($(n16.south) - (0, 2.5mm)$) -| (n18.north);
+			\draw[->] (n16.south) |- ($(n16.south) - (0, 2.5mm)$) -| (n18.north) node[pos=0.3,above] {Often near WP};
 			\draw[->] (n16) -- (n21);
 
-			%---- -11.5
-			\node[s,gray] (n19) at (-5, -11.5) {The Hole - Level 2};
-			\node[s] (n20) at (5, -11.5) {Tower Cellar - Level 2};
-			\node[s] (n23) at (0, -11.5) {Monestary Gate};
+			%---- -11
+			\node[s,gray] (n19) at (-5, -11) {The Hole - Level 2};
+			\node[s] (n20) at (5, -11) {Tower Cellar - Level 1};
+			\node[s] (n23) at (0, -11) {Monestary Gate};
 
 			\draw[->,gray] (n17) -- (n19);
-			\draw[->] (n18) -- (n20) node[midway, left] {Left};
+			\draw[->] (n18) -- (n20);
 			\draw[->] (n21) -- (n23);
 
-			%---- -13
-			\node[s,gray] (n22) at (-5, -13) {The Pit - Level 1};
-			\node[s] (n24) at (5, -13) {Tower Cellar - Level 3};
-			\node[s] (n25) at (0, -13) {\inlinegraphics{Assets/wp} Outer Cloister};
+			%---- -12.5
+			\node[s,gray] (n22) at (-5, -12.5) {The Pit - Level 1};
+			\node[s] (n24) at (5, -12.5) {Tower Cellar - Level 2};
+			\node[s] (n25) at (0, -12.5) {\inlinegraphics{Assets/wp} Outer Cloister};
 
-			\draw[->,gray] (n21.south) |- ($(n21.south) - (0, 5mm)$) -- ($(n21.south) - (2.5, 5mm)$) -- ($(n22.north) + (2.5, 5mm)$) -| (n22.north);
+			\draw[->,gray] (n21.south) |- ($(n21.south) - (0, 2.5mm)$) -- ($(n21.south) - (2.5, 2.5mm)$) -- ($(n22.north) + (2.5, 5mm)$) -| (n22.north);
 			\draw[->] (n20) -- (n24) node[midway, left] {Left};
 			\draw[->] (n23) -- (n25);
 
-			%---- -14.5
-			\node[s,gray] (n38) at (-5, -14.5) {The Pit - Level 2};
-			\node[s] (n26) at (5, -14.5) {Tower Cellar - Level 4};
-			\node[s] (n27) at (0, -14.5) {\inlinegraphics{Assets/Q5} \internallink{MapsActIBarracks}{Barracks}};
+			%---- -14
+			\node[s,gray] (n38) at (-5, -14) {The Pit - Level 2};
+			\node[s] (n26) at (5, -14) {Tower Cellar - Level 3};
+			\node[s] (n27) at (0, -14) {\inlinegraphics{Assets/Q5} \internallink{MapsActIBarracks}{Barracks}};
 
 			\draw[->] (n24) -- (n26) node[midway, left] {Left};
 			\draw[->,gray] (n22) -- (n38);
 			\draw[->] (n25) -- (n27) node[midway, left] {Based on WP};
 
-			%---- -16
-			\node[s] (n28) at (5, -16) {\inlinegraphics{Assets/Q4} Tower Cellar - Level 5};
-			\node[s] (n29) at (0, -16) {\inlinegraphics{Assets/wp} Jail - Level 1};
+			%---- -15.5
+			\node[s] (n28) at (5, -15.5) {Tower Cellar - Level 4};
+			\node[s] (n29) at (0, -15.5) {\inlinegraphics{Assets/wp} Jail - Level 1};
 
 			\draw[->] (n26) -- (n28) node[midway, left] {Left};
 			\draw[->] (n27) -- (n29) node[midway, left] {Left OR Straight};
 
-			%---- -17.5
-			\node[s] (n30) at (0, -17.5) {Jail - Level 2};
+			%---- -17
+			\node[s] (n30) at (0, -17) {Jail - Level 2};
+			\node[s] (n38) at (5, -17) {\inlinegraphics{Assets/Q4} Tower Cellar - Level 5};
 
 			\draw[->] (n29) -- (n30) node[midway, left] {Straight};
+			\draw[->] (n28) -- (n38) node[midway, left] {Left};
 
-			%---- -19
-			\node[s] (n31) at (0, -19) {Jail - Level 3};
+			%---- -18.5
+			\node[s] (n31) at (0, -18.5) {Jail - Level 3};
 
 			\draw[->] (n30) -- (n31) node[midway, left] {Straight};
 
-			%---- -20.5
-			\node[s] (n32) at (0, -20.5) {\inlinegraphics{Assets/wp} Inner Cloister};
+			%---- -20
+			\node[s] (n32) at (0, -20) {\inlinegraphics{Assets/wp} Inner Cloister};
 
 			\draw[->] (n31) -- (n32) node[midway, left] {Left};
 
-			%---- -22
-			\node[s] (n33) at (0, -22) {Cathedral};
+			%---- -21
+			\node[s] (n33) at (0, -21) {Cathedral};
 
 			\draw[->] (n32) -- (n33);
 
-			%---- -23
-			\node[s] (n34) at (0, -23) {Catacombs - Level 1};
+			%---- -22
+			\node[s] (n34) at (0, -22) {Catacombs - Level 1};
 
 			\draw[->] (n33) -- (n34);
 
-			%---- -24
-			\node[s] (n35) at (0, -24) {\inlinegraphics{Assets/wp} Catacombs - Level 2};
+			%---- -23
+			\node[s] (n35) at (0, -23) {\inlinegraphics{Assets/wp} Catacombs - Level 2};
 
 			\draw[->] (n34) -- (n35);
 
-			%---- -25.5
-			\node[s] (n36) at (0, -25.5) {Catacombs - Level 3};
+			%---- -24.5
+			\node[s] (n36) at (0, -24.5) {Catacombs - Level 3};
 
 			\draw[->] (n35) -- (n36) node[midway, left] {Right from WP};
 
-			%---- -26.5
-			\node[s] (n37) at (0, -26.5) {\inlinegraphics{Assets/Q6} Catacombs - Level 4};
+			%---- -25.5
+			\node[s] (n37) at (0, -25.5) {\inlinegraphics{Assets/Q6} Catacombs - Level 4};
 
 			\draw[->] (n36) -- (n37);
 		\end{tikzpicture}
@@ -146,3 +148,5 @@
 
 \subsubsection{\internallinkicon Barracks}\label{MapsActIBarracks}
 Navigation: Left OR Straight. One takes you to the quest, the other to the exit.
+
+%\subsubsection{\internallinkicon }
